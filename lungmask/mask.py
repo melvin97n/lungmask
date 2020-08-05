@@ -91,7 +91,7 @@ def apply(image, model=None, force_cpu=False, batch_size=20, volume_postprocessi
 
 def get_model(modeltype, modelname):
     model_url, n_classes = model_urls[(modeltype, modelname)]
-    state_dict = ../input/unet-r231/unet_r231-d5d2fc3d.pth
+    state_dict = model_url
     if modeltype == 'unet':
         model = UNet(n_classes=n_classes, padding=True, depth=5, up_mode='upsample', batch_norm=True, residual=False)
     elif modeltype == 'resunet':
