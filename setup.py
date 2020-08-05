@@ -11,7 +11,7 @@ setuptools.setup(
     description="Package for automated lung segmentation in CT",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/JoHof/lungmask",
+    url="https://github.com/melvin97n/lungmask",
     packages=setuptools.find_packages(),
     entry_points={
         'console_scripts': [
