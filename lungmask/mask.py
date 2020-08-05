@@ -91,7 +91,7 @@ def apply(image, model=None, force_cpu=False, batch_size=20, volume_postprocessi
 
 def get_model(modeltype, modelname):
     model_url, n_classes = model_urls[(modeltype, modelname)]
-    state_dict = model_url
+    state_dict = state_dict = torch.hub.load_state_dict(model_url, progress=True, map_location=torch.device('cpu'))
     if modeltype == 'unet':
         model = UNet(n_classes=n_classes, padding=True, depth=5, up_mode='upsample', batch_norm=True, residual=False)
     elif modeltype == 'resunet':
